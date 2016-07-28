@@ -1,11 +1,19 @@
+'use strict';
+
 /**
  * mongodb connection script
  */
 
+
+
 // require mongoose and set the path for connecting 
 var mongoose = require('mongoose'),
-  creds = require('../../../creds.json')
-dbUrl = 'mongodb://' + creds.user + ':' + creds.pass + '@ds031925.mlab.com:31925/heroku_p6tvq97c';
+  creds = require('../../../creds.json'),
+  env = (process.env.NODE_ENV === 'testing' ? creds.testing : creds.dev),
+  dbUrl = 'mongodb://' + env.user + ':' + env.pass + env.host;
+
+// console.log('Trying to connect to: ' + dbUrl);
+
 
 // connect to mongo 
 mongoose.connect(dbUrl);
