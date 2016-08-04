@@ -1,6 +1,6 @@
 {
   "name": "react-flux-app",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "start": "node ./src/server/bin/www",
@@ -14,6 +14,7 @@
     "express": "~4.13.1",
     "express-session": "^1.14.0",
     "jade": "~1.11.0",
+    "jsonwebtoken": "^7.1.7",
     "mongoose": "^4.5.7",
     "morgan": "~1.6.1",
     "passport": "^0.3.2",
