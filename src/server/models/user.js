@@ -17,7 +17,8 @@ var mongoose = require('mongoose'),
 // defines our user schema 
 var userSchema = new Schema({
   username: String,
-  password: String
+  password: String,
+  admin: Boolean
 });
 
 // plugs into our user schema to take care of salting and hashing the password 
